@@ -165,6 +165,28 @@ ul.timeline > li:before {
   margin: 5px;
 }
 
+.fa-star{
+  color: lightgrey;
+}
+
+.checked {
+  color: orange;
+}
+
+.navbar{
+  background: white;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-size: 14px;
+}
+
+.navbar-brand{
+  font-size: 30px;
+}
+
+.bold{
+  font-family: 'Raleway-Bold', sans-serif;
+}
 
 
 
