@@ -180,6 +180,10 @@ ul.timeline > li:before {
   font-size: 14px;
 }
 
+.my-start{
+  margin-top: 7%;
+}
+
 .navbar-brand{
   font-size: 30px;
 }
