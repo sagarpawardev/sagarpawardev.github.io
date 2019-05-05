@@ -17,22 +17,44 @@
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script>
+        $(document).ready(function(){
 
+            $("i.fa").popover({'trigger':'hover'});
+
+            $('body').scrollspy({target: ".navbar", offset: 50});
+
+            $("#navbarSupportedContent a").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+
+    </script>
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-light fixed-top">
     <h1 class="navbar-brand">Sagar Pawar</h1>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="navbar-nav ml-auto">
-            <a href="#experience" class="nav-item nav-link active">EXPERIENCE</a>
+            <a href="#experience" class="nav-item nav-link">EXPERIENCE</a>
             <a href="#education" class="nav-item nav-link">EDUCATION</a>
-            <a href="#" class="nav-item nav-link">CERTIFICATION</a>
+            <a href="#achievements" class="nav-item nav-link">ACHIEVEMENTS</a>
             <a href="#skills" class="nav-item nav-link">SKILLS</a>
-            <a href="#" class="nav-item nav-link">CONTACT</a>
+            <a href="#page-top" class="nav-item nav-link">CONTACT</a>
         </div>
     </div>
     <!--<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
@@ -46,7 +68,7 @@
     </div>-->
 </nav>
 
-<div class="my-start">
+<div class="my-start" id="page-top">
     <!-- fourth section - Information -->
     <div id="information" class="pad-section">
         <div class="container">
@@ -54,7 +76,7 @@
 
                 <div class="col-sm-6 col-lg-4 offset-lg-2 my-intro-bkg">
                     <!--<img id="profpic" src="https://static.wixstatic.com/media/23e8ad88ae744df0bd7f5221f3d67b0e.jpg/v1/crop/x_90,y_275,w_2349,h_2350/fill/w_470,h_470,al_c,q_80,usm_0.66_1.00_0.01/23e8ad88ae744df0bd7f5221f3d67b0e.webp" class="img-fluid" alt="Responsive image">-->
-                    <img id="profpic" src="images/profpic.jpg" class="img-fluid center" alt="Responsive image">
+                    <img id="profpic" src="images/sagar.jpg" class="img-fluid center" alt="Responsive image">
 
                 </div>
                 <div class="col-sm-6 col-lg-4 my-intro-details">
@@ -162,6 +184,7 @@
     </div>
     <!-- /fourth section -->
 
+
     <div id="section2" class="padded-section">
         <div class="container">
             <div class="row">
@@ -184,12 +207,13 @@
                 <div class="col-lg-2"></div>
                 <div class="col-sm-12 col-lg-8"> I'm a software developer, coder, hacker, and enthusiast. I'm a jack of
                     all
-                    cards but master of JAVA and its related frameworks.
+                    trades but master of JAVA and its related frameworks.
                     I have worked with <img src="images/sap.png" alt="SAP" style="height:13px; margin: 0 3px 0 3px;">
                     and
                     <img src="images/oracle.png" alt="Oracle" style="height:20px; margin: 0 3px 0 8px;"> as a developer
                     and
-                    build some amazing solutions for customers. I love to brainstorm, sports, ride bikes, travel and
+                    build some amazing solutions for customers. I love to brainstorm, play sports, ride bikes, travel
+                    and
                     trying new
                     hobbies.
                 </div>
@@ -212,11 +236,9 @@
                             <h6>SAP Labs India</h6>
                             <span>Oct, 2018 - Present</span>
                             <span class="float-right">Bengaluru</span>
-                            <p>I working in the integration team and responsible for integrating two different systems
-                                with
-                                customization flexibility. My team is responsible for integrating SAP commerce with
-                                Cloud
-                                for Customer, Digital Payment, revenue cloud, SAP Spartacus, etc</p>
+                            <p>I am working in the integration team and responsible for stitching two different systems
+                                with customization flexibility. My team is responsible for integrating SAP commerce with
+                                Cloud for Customer, Digital Payment, revenue cloud, SAP Spartacus, etc</p>
                         </li>
                         <li>
                             <h5>Associate Consultant</h5>
@@ -259,7 +281,7 @@
                             <h5>Post Graduate Certificate, Big Data Engineering</h5>
                             <div class="row">
                                 <div class="col-lg-8">
-                                    Birla Institute of Technology, Pilani
+                                    Birla Institute of Technology &amp; Science, Pilani
                                 </div>
                                 <div class="col-lg-4" align="right">Dec, 2018 - Nov, 2019</div>
                             </div>
@@ -279,104 +301,192 @@
         </div>
     </div>
 
+    <div id="section6" class="padded-section" >
+        <hr/>
+        <h4 id="achievements" class="container div-header align-middle">
+            RECOGNITIONS / ACHIEVEMENTS
+        </h4>
+        <hr/>
+        <div class="container  mt-5 mb-5">
+            <div class="card">
+                <div class="card-body container">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <a href="https://www.codechef.com/" target="_blank"><img src="images/codechef.jpeg" class="img-fluid center" style="width: 80px" alt="Codechef"></a>
+                        </div>
+                        <div class="col-lg-10">
+                            <h5 class="card-title">CodeChef Certified Data Structure & Algorithms Programme (CCDSAP)</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Issued on Jul 2018 - No Expiration Date</h6>
+                            <table>
+                                <tr>
+                                    <td colspan="2"><h6 class="card-subtitle mb-2 text-muted">Issued on Mar, 2019 - Mar, 2022</h6></td>
+                                </tr>
+                                <tr>
+                                    <td><h6 class="card-subtitle mb-2 text-muted">Credential Id:</h6></td>
+                                    <td><h6 class="card-subtitle mb-2 text-muted">486dd56</h6></td>
+                                    <td rowspan="2"><a href="https://www.codechef.com/certificates/verify" target="_blank" class="btn btn-primary float-top">Verify</a></td>
+                                </tr>
+                                <tr>
+                                    <td><h6 class="card-subtitle mb-2 text-muted">username:</h6></td>
+                                    <td><h6 class="card-subtitle mb-2 text-muted">sgrpwr</h6></td>
+
+                                </tr>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body container">
+                        <div class="row">
+                            <div class="col-lg-2">
+                                <a href="http://gate.iitm.ac.in/" target="_blank"><img src="images/gate.jpg" class="img-fluid center" style="width: 80px" alt="Codechef"></a>
+                            </div>
+                            <div class="col-lg-10">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h6>Graduate Aptitude Test in Engineering (GATE 2019)</h6>
+                                    </div>
+                                </div>
+
+                                <table>
+                                    <tr>
+                                        <td colspan="2"><h6 class="card-subtitle mb-2 text-muted">Issued on Mar, 2019 - Mar, 2022</h6></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h6 class="card-subtitle mb-2 text-muted">Registration Number:</h6></td>
+                                        <td><h6 class="card-subtitle mb-2 text-muted">&nbsp; CS19S31247054</h6></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h6 class="card-subtitle mb-2 text-muted">Gate Score:</h6></td>
+                                        <td><h6 class="card-subtitle mb-2 text-muted">&nbsp; 610 (Percentile: 98.08)</h6></td>
+                                    </tr>
+                                </table>
+                                <div class="row">
+                                    <div class="col">
+                                        <h6 class="card-subtitle mb-2 text-muted"></h6>
+                                    </div>
+                                    <div class="col">
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-auto col-md-auto col-lg-auto">
+
+                                    </div>
+                                    <div class="col-sm-9 col-md-9 col-lg-9">
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="section5" class="padded-section">
         <hr/>
         <h4 id="skills" class="container div-header align-middle">
             SKILLS
         </h4>
         <hr/>
-        <div class="container">
-
-            <p class="font_8">&nbsp;</p>
-            <h5>Active Skills: </h5>
-            <button type="button" class="btn btn-info">
+        <div class="container  mt-5 mb-5" align="center">
+            <h5>Active Skills:
+                <i class="fa fa-question-circle" title="Do you like my fa-coq icon?"></i>
+                <i class="fa fa-question-circle icon" rel="popover" title="Title" data-content="Content"></i>
+            </h5>
+            <button type="button" class="btn btn-info" disabled>
                 JAVA <span class="badge badge-light">5</span>
             </button>
-            <button type="button" class="btn btn-info">
+            <button type="button" class="btn btn-info" disabled>
                 Python <span class="badge badge-light">4</span>
             </button>
-            <button type="button" class="btn btn-info">
+            <button type="button" class="btn btn-info" disabled>
                 Big Data Engineering <span class="badge badge-light">3</span>
             </button>
-            <button type="button" class="btn btn-info">
+            <button type="button" class="btn btn-info" disabled>
                 Algorithms <span class="badge badge-light">5</span>
             </button>
-            <button type="button" class="btn btn-info">
+            <button type="button" class="btn btn-info" disabled>
                 Data Structures <span class="badge badge-light">5</span>
             </button>
-            <button type="button" class="btn btn-info">
+            <button type="button" class="btn btn-info" disabled>
                 SAP Hybris/Commerce <span class="badge badge-light">3</span>
             </button>
-            <button type="button" class="btn btn-info">
+            <button type="button" class="btn btn-info" disabled>
                 Spring MVC <span class="badge badge-light">4</span>
             </button>
-            <button type="button" class="btn btn-info">
+            <button type="button" class="btn btn-info" disabled>
                 SQL <span class="badge badge-light">4</span>
             </button>
-            <button type="button" class="btn btn-info">
+            <button type="button" class="btn btn-info" disabled>
                 Android Development <span class="badge badge-light">4</span>
             </button>
-            <button type="button" class="btn btn-info">
+            <button type="button" class="btn btn-info" disabled>
                 SAP HCI <span class="badge badge-light">4</span>
             </button>
-            <button type="button" class="btn btn-info">
+            <button type="button" class="btn btn-info" disabled>
                 GIT <span class="badge badge-light">3</span>
             </button>
-            <button type="button" class="btn btn-info">
+            <button type="button" class="btn btn-info" disabled>
                 RESTful API <span class="badge badge-light">4</span>
             </button>
 
             <p class="font_8">&nbsp;</p>
             <h5>Passive Skills: </h5>
-            <button type="button" class="btn btn-secondary">
+            <button type="button" class="btn btn-secondary" disabled>
                 DJango
             </button>
-            <button type="button" class="btn btn-secondary">
+            <button type="button" class="btn btn-secondary" disabled>
                 Shell Scripting
             </button>
-            <button type="button" class="btn btn-secondary">
+            <button type="button" class="btn btn-secondary" disabled>
                 JavaScript
             </button>
-            <button type="button" class="btn btn-secondary">
+            <button type="button" class="btn btn-secondary" disabled>
                 J2EE
             </button>
-            <button type="button" class="btn btn-secondary">
+            <button type="button" class="btn btn-secondary" disabled>
                 HTML &amp; CSS
             </button>
-            <button type="button" class="btn btn-secondary">
+            <button type="button" class="btn btn-secondary" disabled>
                 Material Design
             </button>
-            <button type="button" class="btn btn-secondary">
+            <button type="button" class="btn btn-secondary" disabled>
                 Oracle FCUBS
             </button>
-            <button type="button" class="btn btn-secondary">
+            <button type="button" class="btn btn-secondary" disabled>
                 Messaging Queues
             </button>
-            <button type="button" class="btn btn-secondary">
+            <button type="button" class="btn btn-secondary" disabled>
                 PHP
             </button>
-            <button type="button" class="btn btn-secondary">
+            <button type="button" class="btn btn-secondary" disabled>
                 Openshift Cloud
             </button>
-            <button type="button" class="btn btn-secondary">
+            <button type="button" class="btn btn-secondary" disabled>
                 Hibernate
             </button>
-            <button type="button" class="btn btn-secondary">
+            <button type="button" class="btn btn-secondary" disabled>
                 PL/SQL
             </button>
-            <button type="button" class="btn btn-secondary">
+            <button type="button" class="btn btn-secondary" disabled>
                 Angular
             </button>
-            <button type="button" class="btn btn-secondary">
+            <button type="button" class="btn btn-secondary" disabled>
                 Mongo DB
             </button>
-            <button type="button" class="btn btn-secondary">
+            <button type="button" class="btn btn-secondary" disabled>
                 Heroku Cloud
             </button>
-            <button type="button" class="btn btn-secondary">
+            <button type="button" class="btn btn-secondary" disabled>
                 Ethical Hacking
             </button>
-            <button type="button" class="btn btn-secondary">
+            <button type="button" class="btn btn-secondary" disabled>
                 IoT
             </button>
 
@@ -384,6 +494,11 @@
     </div>
 </div>
 
+<footer class="footer">
+    <div class="container">
+        <span class="text-muted">© 2019 By Sagar Pawar</span>
+    </div>
+</footer>
 </body>
 
 </html>
