@@ -13,6 +13,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet"/>
@@ -20,7 +21,9 @@
     <script>
         $(document).ready(function(){
 
-            $("i.fa").popover({'trigger':'hover'});
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
 
             $('body').scrollspy({target: ".navbar", offset: 50});
 
@@ -395,9 +398,9 @@
         </h4>
         <hr/>
         <div class="container  mt-5 mb-5" align="center">
-            <h5>Active Skills:
-                <i class="fa fa-question-circle" title="Do you like my fa-coq icon?"></i>
-                <i class="fa fa-question-circle icon" rel="popover" title="Title" data-content="Content"></i>
+            <h5>
+                <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="top" title="Active Skills are skills which I am using frequently at present"></i>
+                Active Skills:
             </h5>
             <button type="button" class="btn btn-info" disabled>
                 JAVA <span class="badge badge-light">5</span>
@@ -437,7 +440,10 @@
             </button>
 
             <p class="font_8">&nbsp;</p>
-            <h5>Passive Skills: </h5>
+            <h5>
+                <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="top" title="Passive Skills are skills which I have worked previously but can be reiterated as and when needed"></i>
+                Passive Skills:
+            </h5>
             <button type="button" class="btn btn-secondary" disabled>
                 DJango
             </button>
