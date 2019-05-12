@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
+<head id="page-top">
     <title>Sagar Intro</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,13 +21,14 @@
     <link href="css/style.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <script>
+        
         $(document).ready(function () {
 
             $(function () {
                 $('[data-toggle="tooltip"]').tooltip()
             });
 
-            $('body').scrollspy({target: ".navbar", offset: 50});
+            $('body').scrollspy({target: ".navbar"});
 
             $("#navbarSupportedContent a").on('click', function (event) {
                 if (this.hash !== "") {
@@ -46,14 +47,14 @@
     </script>
 </head>
 <body>
-<nav class="navbar navbar-expand-md navbar-light fixed-top">
+<nav class="navbar navbar-expand-md navbar-light fixed-top" >
     <h1 class="navbar-brand">Sagar Pawar</h1>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
         <div class="navbar-nav ml-auto">
             <a href="#experience" class="nav-item nav-link">EXPERIENCE</a>
             <a href="#education" class="nav-item nav-link">EDUCATION</a>
@@ -62,15 +63,6 @@
             <a href="#page-top" class="nav-item nav-link">CONTACT</a>
         </div>
     </div>
-    <!--<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <a href="#experience" class="nav-item nav-link active">EXPERIENCE</a>
-            <a href="#education" class="nav-item nav-link">EDUCATION</a>
-            <a href="#" class="nav-item nav-link">CERTIFICATION</a>
-            <a href="#skills" class="nav-item nav-link">SKILLS</a>
-            <a href="#" class="nav-item nav-link">CONTACT</a>
-        </ul>
-    </div>-->
 </nav>
 
 <div class="my-start" id="page-top">
@@ -80,7 +72,6 @@
             <div class="row">
 
                 <div class="col-sm-6 col-lg-4 offset-lg-2 my-intro-bkg">
-                    <!--<img id="profpic" src="https://static.wixstatic.com/media/23e8ad88ae744df0bd7f5221f3d67b0e.jpg/v1/crop/x_90,y_275,w_2349,h_2350/fill/w_470,h_470,al_c,q_80,usm_0.66_1.00_0.01/23e8ad88ae744df0bd7f5221f3d67b0e.webp" class="img-fluid" alt="Responsive image">-->
                     <img id="profpic" src="images/sagar.jpg" class="img-fluid center" alt="Responsive image">
 
                 </div>
@@ -230,11 +221,12 @@
                 </div>
                 <div class="col-lg-2"></div>
             </div>
+            <div id="experience"></div><!--Dummy div, due to fix nav hiding content problem-->
         </div>
     </div>
 
     <div id="section3" class="padded-section">
-        <h4 id="experience" class="container div-header align-middle">
+        <h4 class="container div-header align-middle">
             EXPERIENCE
         </h4>
         <hr/>
@@ -275,12 +267,13 @@
                     </ul>
                 </div>
             </div>
+            <div id="education" class="container div-header align-middle"></div><!--Dummy div, due to fix nav hiding content problem-->
         </div>
     </div>
 
     <div id="section4" class="padded-section">
         <hr/>
-        <h4 id="education" class="container div-header align-middle">
+        <h4 class="container div-header align-middle">
             EDUCATION
         </h4>
         <hr/>
@@ -309,12 +302,13 @@
                     </ul>
                 </div>
             </div>
+            <div id="achievements" class="container div-header align-middle"></div><!--Dummy div, due to fix nav hiding content problem-->
         </div>
     </div>
 
     <div id="section6" class="padded-section">
         <hr/>
-        <h4 id="achievements" class="container div-header align-middle">
+        <h4 class="container div-header align-middle">
             RECOGNITIONS / ACHIEVEMENTS
         </h4>
         <hr/>
