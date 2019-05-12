@@ -70,6 +70,10 @@ html, body {
   -webkit-background-clip: text;
 }
 
+.fab.fa-github{
+  color: #424242;
+}
+
 .my-intro-details{
   background-color:white;
   opacity: 0.95;
